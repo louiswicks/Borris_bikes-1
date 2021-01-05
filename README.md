@@ -16,3 +16,13 @@ Describe and show how to run the tests with code examples.
 | Person |
 | Bike | is_working | 
 | Docking_station | realease |
+
+#Blueprint 
+
+1) Person sends message "use bike" to docking station.
+2) Docking station receives "use bike" message and sends message "are you working" to bike 
+3) Bike receives "are you working" message
+     if bike responds no then check next bike 
+     elsif bike responds yes then release bike 
+     else all bikes return no then return message to user "no working bikes available"
+   end
