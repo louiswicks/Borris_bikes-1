@@ -17,4 +17,4 @@ end
 
 # In terminal run 'rspec' whilst in project folder 'Borris_bikes-1'
 # Example 1 should pass
-# Example 2 should pass 
+# Example 2 should fail 
