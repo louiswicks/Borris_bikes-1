@@ -1,8 +1,12 @@
-require 'docking_station' 
+require 'docking_station'
 
-describe DockingStation do 
-  it "creates an instance of Dockingtstation" do 
+describe DockingStation do
+  it "checking release_bike method" do
     expect(subject).to respond_to :release_bike
-  end 
-end
+  end
 
+  it 'releases working bikes' do
+    bike = subject.release_bike
+    expect(bike).to be_working
+  end
+end
