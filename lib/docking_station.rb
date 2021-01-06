@@ -1,10 +1,6 @@
-def add_numbers
-  2 + 2
-end
+class DockingStation 
+  def release_bike 
+    "released bike!"
+  end
+end 
 
-def release_bike
-  "release bikes"
-end
-    
-add_numbers
-release_bike
