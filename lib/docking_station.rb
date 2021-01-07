@@ -9,6 +9,7 @@ class DockingStation
   end
 
   def dock(bike)
+    fail "Limit reached" unless @bike == nil  
     @bike = bike
   end
 
