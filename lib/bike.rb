@@ -1,4 +1,3 @@
-#testing
 class Bike
   def working?
     true
