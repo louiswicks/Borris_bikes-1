@@ -12,19 +12,19 @@ describe DockingStation do
 
   it 'docks something' do
     bike = Bike.new
-    expect(subject.dock(bike)).to eq bike
+    expect(subject.dock(bike)).to eq [bike]
   end
 
   it "returns docked bikes" do
     bike = Bike.new
     subject.dock(bike)
-    expect(subject.bikes).to eq bike
+    expect(subject.bikes).to eq [bike]
   end
 
   it "releases a bikes" do
     bike = Bike.new
     subject.dock(bike)
-    expect(subject.bikes).to eq bike
+    expect(subject.bikes).to eq [bike]
   end
 
   it 'responds to bike' do
@@ -40,7 +40,8 @@ describe DockingStation do
   it "raises an error when limit is reached" do
     bike = Bike.new
     station = DockingStation.new
-    station.dock(bike)
+    #station.dock(bike)
+    20.times {station.dock Bike.new }
     expect {station.dock(bike)}.to raise_error "Limit reached"
   end
 
