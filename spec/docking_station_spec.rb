@@ -40,8 +40,9 @@ describe DockingStation do
   it "raises an error when limit is reached" do
     bike = Bike.new
     station = DockingStation.new
+    DEFAULT_CAPACITY = 20 
     #station.dock(bike)
-    20.times {station.dock Bike.new }
+    DEFAULT_CAPACITY.times {station.dock Bike.new }
     expect {station.dock(bike)}.to raise_error "Limit reached"
   end
 
