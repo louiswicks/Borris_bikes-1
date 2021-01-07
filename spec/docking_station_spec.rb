@@ -18,17 +18,17 @@ describe DockingStation do
   it "returns docked bikes" do
     bike = Bike.new
     subject.dock(bike)
-    expect(subject.bike).to eq bike
+    expect(subject.bikes).to eq bike
   end
 
   it "releases a bikes" do
     bike = Bike.new
     subject.dock(bike)
-    expect(subject.bike).to eq bike
+    expect(subject.bikes).to eq bike
   end
 
   it 'responds to bike' do
-    expect(subject).to respond_to :bike
+    expect(subject).to respond_to :bikes
   end
 
   describe '#release_bike' do
