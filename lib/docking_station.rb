@@ -19,6 +19,10 @@ class DockingStation
     @bikes << bike
   end
 
+  def capacity(n)
+    @capacity = n
+  end 
+
   private
 
   def full?

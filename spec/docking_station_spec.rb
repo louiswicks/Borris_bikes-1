@@ -40,10 +40,15 @@ describe DockingStation do
   it "raises an error when limit is reached" do
     bike = Bike.new
     station = DockingStation.new
-    DEFAULT_CAPACITY = 20 
-    #station.dock(bike)
-    DEFAULT_CAPACITY.times {station.dock Bike.new }
+    DockingStation::DEFAULT_CAPACITY.times {station.dock Bike.new }
     expect {station.dock(bike)}.to raise_error "Limit reached"
   end
+
+  it "set a @capacity instance variable" do
+    expect(subject.capacity(20)).to eq 20
+  end
+
+
+
 
 end
